@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact / お問い合わせ | osA Beyond Inc.</title>
+  <meta name="description" content="Contact osA Beyond Inc. for a free consultation. お問い合わせ・無料相談はこちらから。">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="osA Beyond Inc." class="logo">
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Home<span class="nav-ja"> ホーム</span></a>
+          <a href="services.html" class="nav-link">Services<span class="nav-ja"> サービス</span></a>
+          <a href="about.html" class="nav-link">About<span class="nav-ja"> 会社紹介</span></a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+          <a href="contact.html" class="btn btn-primary nav-cta">Free Consultation / 無料相談</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="nav-link">Home / ホーム</a>
+      <a href="services.html" class="nav-link">Services / サービス</a>
+      <a href="about.html" class="nav-link">About / 会社紹介</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="btn btn-primary">Free Consultation / 無料相談</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+
+    <!-- ページヒーロー -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact Us<span class="ja-sub">お問い合わせ・無料相談</span></h1>
+        <p>Just share your industry, product, and target market — we'll take it from there.<br>
+        業種・製品・サービス・ターゲット市場を教えていただくだけで、具体的なご提案が可能です。</p>
+      </div>
+    </section>
+
+    <!-- お問い合わせフォーム -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- 左：案内 -->
+          <div class="contact-info">
+            <h3>Let's Talk<br><span style="font-size:0.75em;color:var(--gray-mid);font-weight:500;">お気軽にご相談ください</span></h3>
+            <p>
+              Whether it's about market entry, global business, or AI adoption — any question is welcome. Even if you don't have a concrete plan yet, we're happy to help.<br>
+              <span style="font-size:0.92em;color:var(--gray-mid);">参入の仕方・AIの活用・海外ビジネスの進め方など、どんな疑問でも構いません。具体的な計画がない段階でも大歓迎です。</span>
+            </p>
+            <div class="contact-points">
+              <div class="contact-point">
+                <div class="icon">🚀</div>
+                <div class="text">
+                  <strong>Immediate Start / 即時対応</strong>
+                  <span>Ready to begin right after signing / 契約次第で即時支援スタート</span>
+                </div>
+              </div>
+              <div class="contact-point">
+                <div class="icon">🌍</div>
+                <div class="text">
+                  <strong>Worldwide / 全世界対応</strong>
+                  <span>Any country or region / どの国・地域でもご相談ください</span>
+                </div>
+              </div>
+              <div class="contact-point">
+                <div class="icon">💬</div>
+                <div class="text">
+                  <strong>EN &amp; JP / 日英両対応</strong>
+                  <span>Japanese &amp; English both available / 日本語・英語どちらでも可</span>
+                </div>
+              </div>
+              <div class="contact-point">
+                <div class="icon">📍</div>
+                <div class="text">
+                  <strong>Location / 所在地</strong>
+                  <span>VORT Akihabara Ⅳ 2F, Chiyoda-ku, Tokyo<br>〒101-0041 東京都千代田区神田須田町1-7-8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右：フォーム -->
+          <div>
+            <div class="contact-form" id="contactFormWrap">
+              <form id="contactForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Name / お名前<span class="required">*</span></label>
+                    <input type="text" name="name" placeholder="Taro Yamada / 山田 太郎" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Company / 会社名</label>
+                    <input type="text" name="company" placeholder="osA Beyond Inc.">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Email / メールアドレス<span class="required">*</span></label>
+                  <input type="email" name="email" placeholder="example@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label>Inquiry Type / お問い合わせ種別<span class="required">*</span></label>
+                  <select name="type" required>
+                    <option value="">Select / 選択してください</option>
+                    <option value="japan-entry">Japan Market Entry / 日本市場参入支援</option>
+                    <option value="global-biz">Global Business Consulting / 海外ビジネスコンサル</option>
+                    <option value="ai">AI Consulting (Japanese SMEs only) / AIコンサル（日本企業向け）</option>
+                    <option value="other">Other / その他</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Industry / Service / 業種・製品・サービス概要</label>
+                  <input type="text" name="industry" placeholder="e.g. Fintech SaaS / 製造業など">
+                </div>
+                <div class="form-group">
+                  <label>Message / ご相談内容<span class="required">*</span></label>
+                  <textarea name="message" placeholder="Please feel free to describe your situation, goals, or any concerns. / 現状の課題・目標・気になることなど何でも構いません。" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem; padding:16px;">
+                  Send / 送信する
+                </button>
+              </form>
+
+              <!-- 送信完了メッセージ -->
+              <div class="form-success" id="formSuccess">
+                <div class="checkmark">✓</div>
+                <h3>Message Sent! / 送信完了！</h3>
+                <p>Thank you for reaching out. We'll get back to you shortly.<br>
+                お問い合わせありがとうございます。内容を確認の上、担当者よりご連絡いたします。</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="osA Beyond Inc." class="logo">
+          <p>Bridging East &amp; West — Building strategic partnerships between innovative companies globally.<br>
+          <span style="font-size:0.92em;opacity:0.80;">東西の架け橋として、戦略的パートナーシップを構築します。</span></p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages / ページ</h4>
+          <ul>
+            <li><a href="index.html">Home / ホーム</a></li>
+            <li><a href="services.html">Services / サービス</a></li>
+            <li><a href="about.html">About / 会社紹介</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact / お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services / サービス</h4>
+          <ul>
+            <li><a href="services.html">Japan Market Entry / 日本参入支援</a></li>
+            <li><a href="services.html">Global Consulting / 海外ビジネス</a></li>
+            <li><a href="services.html">AI Consulting / AIコンサル</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 osA Beyond Inc. / オーエスエイビヨンド株式会社. All rights reserved.</span>
+        <span>〒101-0041 東京都千代田区神田須田町1-7-8 VORT秋葉原Ⅳ 2F</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- チャットボット -->
+  <div class="chatbot-widget">
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <div class="avatar">o</div>
+        <div class="info">
+          <strong>osA Beyond AI Assistant</strong>
+          <span><span class="online-dot"></span>Online / オンライン</span>
+        </div>
+        <button class="chatbot-close" id="chatbotClose">✕</button>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="msg bot">
+          <div class="msg-avatar">o</div>
+          <div class="msg-bubble">
+            Any questions before submitting the form? 😊<br>
+            <span style="font-size:0.90em;opacity:0.80;">お問い合わせ前にご不明な点があればお気軽にどうぞ！</span>
+          </div>
+        </div>
+      </div>
+      <div class="chatbot-input-area">
+        <textarea id="chatbotInput" placeholder="Message / メッセージを入力..." rows="1"></textarea>
+        <button class="chatbot-send" id="chatbotSend">➤</button>
+      </div>
+    </div>
+    <button class="chatbot-btn" id="chatbotBtn" aria-label="チャットを開く">
+      💬
+      <span class="chatbot-badge"></span>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script>
+    /* お問い合わせフォームの送信処理（デモ用） */
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const required = this.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = 'var(--red)';
+          valid = false;
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+      if (!valid) return;
+      this.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
