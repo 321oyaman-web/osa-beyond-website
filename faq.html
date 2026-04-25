@@ -8,6 +8,25 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .faq-section-header {
+      background: #f5f7fa;
+      border-left: 4px solid #c8181e;
+      padding: 16px 24px;
+      margin: 48px 0 28px 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+    }
+    .faq-section-header.ocean {
+      border-left-color: #00b4ff;
+      background: rgba(0, 180, 255, 0.08);
+    }
+    .faq-section-header.japan {
+      border-left-color: var(--red);
+      background: rgba(200, 24, 30, 0.08);
+    }
+  </style>
 </head>
 <body>
 
@@ -53,105 +72,412 @@
     <!-- FAQセクション -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Frequently Asked <span>Questions</span><span class="ja-sub">よくある質問</span></h2>
-        <p class="section-subtitle">
-          Can't find your answer? Chat with us or use the contact form below.<br>
-          解決しない場合はチャットまたはお問い合わせフォームからご連絡ください。
-        </p>
+
+        <!-- ============================================
+             セクション0：共通の質問
+        ============================================ -->
+        <div class="faq-section-header">
+          共通の質問 / Common Questions
+        </div>
 
         <div class="faq-list">
 
-          <!-- Q1 -->
+          <!-- Q1: プロセス -->
           <div class="faq-item">
             <div class="faq-question">
-              <span class="q-icon">Q</span>
-              <span class="q-text">
-                How quickly can you start? / 支援開始までどのくらいかかりますか？
-              </span>
+              <span class="q-icon">Q1</span>
+              <span class="q-text">相談から支援開始までのプロセスを教えてください。/ What is the process from inquiry to project start?</span>
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <strong>EN:</strong> We review your requirements and can start immediately after signing the contract.<br><br>
-              <strong>JP:</strong> 要望内容を確認し、契約次第で即時支援をスタートします。お客様のご要望・プロジェクトの内容をヒアリングした上で、最短で支援を開始できる体制を整えています。まずはお気軽にご相談ください。
+              <strong>【日本語】</strong><br>
+              以下の7ステップで進みます：<br><br>
+              <ol style="margin: 12px 0 12px 24px;">
+                <li><strong>お問い合わせ</strong>（フォーム / メール / チャットボット）</li>
+                <li><strong>無料初回相談</strong>（オンライン 約60分）— 課題ヒアリング</li>
+                <li><strong>NDA締結</strong>（詳細ヒアリング前）</li>
+                <li><strong>詳細ヒアリング・要件整理</strong>（1〜2回のミーティング）</li>
+                <li><strong>提案書・見積書の提示</strong>（通常1〜2週間）</li>
+                <li><strong>契約締結</strong></li>
+                <li><strong>キックオフミーティング・プロジェクト開始</strong></li>
+              </ol>
+              問い合わせから契約までは、通常<strong>1〜3ヶ月</strong>を要します。プロジェクト規模により前後する場合があります。<br><br>
+              <strong>【English】</strong><br>
+              Our standard process consists of 7 steps:<br><br>
+              <ol style="margin: 12px 0 12px 24px;">
+                <li><strong>Inquiry</strong> (form, email, or chatbot)</li>
+                <li><strong>Free Initial Consultation</strong> (online, ~60 minutes) — requirements gathering</li>
+                <li><strong>NDA Signing</strong> (before detailed discussions)</li>
+                <li><strong>Detailed Hearings & Requirements Gathering</strong> (1-2 follow-up meetings)</li>
+                <li><strong>Proposal & Quote Submission</strong> (typically 1-2 weeks)</li>
+                <li><strong>Contract Execution</strong></li>
+                <li><strong>Kickoff Meeting & Project Start</strong></li>
+              </ol>
+              From inquiry to contract typically takes <strong>1-3 months</strong>, depending on project scope.
             </div>
           </div>
 
-          <!-- Q2 -->
+          <!-- Q2: 契約形態と料金 -->
           <div class="faq-item">
             <div class="faq-question">
-              <span class="q-icon">Q</span>
-              <span class="q-text">
-                Which countries do you cover? / どの国・地域に対応していますか？
-              </span>
+              <span class="q-icon">Q2</span>
+              <span class="q-text">契約形態と料金はどのように決まりますか？/ How are contract terms and pricing determined?</span>
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <strong>EN:</strong> We cover all countries and regions. Our track record includes companies from Finland, India, China, and Malaysia.<br><br>
-              <strong>JP:</strong> どの国・地域でも対応可能です。これまでの支援実績としては、フィンランド・インド・中国・マレーシアの企業をサポートしてきました。対応言語や地域についてのご不安がある場合も、まずはご相談ください。
+              <strong>【日本語】</strong><br>
+              契約形態は、<strong>固定報酬と成果報酬を組み合わせたハイブリッド型</strong>を中心に、プロジェクトの性質に応じて柔軟に設計します。<br><br>
+              例：
+              <ul style="margin: 12px 0 12px 24px;">
+                <li>市場調査 → 固定報酬型</li>
+                <li>パートナー開拓・Sales REP → 固定報酬 + 成果報酬</li>
+                <li>月額顧問契約 → 月額固定 + 成果インセンティブ</li>
+              </ul>
+              <strong>料金はプロジェクトの規模・期間・要件により大きく異なるため、個別お見積もり</strong>にて対応しております。初回相談は無料ですので、まずはお気軽にご相談ください。<br><br>
+              <strong>【English】</strong><br>
+              We primarily use a <strong>hybrid model combining fixed fees and performance-based compensation</strong>, tailored to each project's nature.<br><br>
+              Examples:
+              <ul style="margin: 12px 0 12px 24px;">
+                <li>Market research → fixed fee</li>
+                <li>Partner development / Sales REP → fixed fee + success-based commission</li>
+                <li>Monthly advisory → monthly retainer + performance incentives</li>
+              </ul>
+              <strong>Pricing varies significantly based on project scope, duration, and requirements, and is provided as a custom quote.</strong> Initial consultations are complimentary — please feel free to reach out.
             </div>
           </div>
 
-          <!-- Q3 -->
+          <!-- Q3: 支援期間 -->
           <div class="faq-item">
             <div class="faq-question">
-              <span class="q-icon">Q</span>
-              <span class="q-text">
-                How do I get started? / まず何から相談すればいいですか？
-              </span>
+              <span class="q-icon">Q3</span>
+              <span class="q-text">支援期間の目安はどのくらいですか？/ What is the typical duration of engagement?</span>
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <strong>EN:</strong> Just share your industry, product/service, and target market. Tell us your concerns about market entry or any questions you have — we welcome everything.<br><br>
-              <strong>JP:</strong> まずは業種・製品・サービス・ターゲット市場などを教えていただき、参入の仕方等に対する心配事は何でもお気軽にご相談ください。具体的な計画がない段階でも大歓迎です。
+              <strong>【日本語】</strong><br>
+              サービスにより異なります：<br><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li><strong>海外企業対応</strong>：6ヶ月〜1年</li>
+                <li><strong>AIコンサルティング</strong>：PoC フェーズ 3〜6ヶ月。継続支援は別途ご相談</li>
+                <li><strong>パートナー開拓</strong>：6ヶ月〜（継続契約推奨）</li>
+              </ul>
+              これらは目安であり、プロジェクトの性質により前後します。<br><br>
+              <strong>【English】</strong><br>
+              Duration varies by service:<br><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li><strong>Japan Market Entry Support</strong>: 6 months to 2 years (market research only: ~3 months)</li>
+                <li><strong>International Business Expansion Support</strong>: 6 months to 1 year</li>
+                <li><strong>Partner Development / Sales REP</strong>: 6 months+ (continuous engagement recommended)</li>
+              </ul>
+              These are estimates and may vary based on project specifics.
             </div>
           </div>
 
-          <!-- Q4 -->
+          <!-- Q4: NDA -->
           <div class="faq-item">
             <div class="faq-question">
-              <span class="q-icon">Q</span>
-              <span class="q-text">
-                How is pricing determined? / 料金はどのように決まりますか？
-              </span>
+              <span class="q-icon">Q4</span>
+              <span class="q-text">相談時に機密保持契約（NDA）を締結できますか？/ Can you sign an NDA before discussions?</span>
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <strong>EN:</strong> All services are custom-quoted based on your needs, project scope, and timeline. Pricing details will be discussed during consultation.<br><br>
-              <strong>JP:</strong> すべてのサービスはお客様のニーズ・プロジェクト規模・期間に応じた個別見積もりです。価格の目安についても、ご相談の中でご説明しますので、まずはお問い合わせください。
+              <strong>【日本語】</strong><br>
+              はい、対応いたします。詳細なヒアリングに入る前に<strong>NDAを締結</strong>し、機密情報を厳格に取り扱います。初回相談は概要のみをお話しして、詳細情報はNDA締結後にお受けします。お客様側のNDAテンプレートでの締結も可能です。<br><br>
+              <strong>【English】</strong><br>
+              Yes, we do. We sign an NDA before entering detailed discussions, ensuring your confidential information is strictly protected. Our initial consultation covers overview-level information, with detailed specifics shared only after NDA execution. We can also accommodate client-provided NDA templates.
             </div>
           </div>
 
-          <!-- Q5 -->
+          <!-- Q5: 対象企業規模 -->
           <div class="faq-item">
             <div class="faq-question">
-              <span class="q-icon">Q</span>
-              <span class="q-text">
-                Do you support both Japanese and English? / 日本語・英語どちらで対応していますか？
-              </span>
+              <span class="q-icon">Q5</span>
+              <span class="q-text">どのような規模の企業が対象ですか？/ What company sizes do you work with?</span>
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <strong>EN:</strong> Yes, we support both Japanese and English. Overseas clients are welcome to contact us in English. We also handle bilingual bridging between Japanese and overseas companies.<br><br>
-              <strong>JP:</strong> 日本語・英語ともに対応しています。海外企業のお客様は英語でのご相談も可能です。また、日本企業と海外企業の間の通訳・翻訳も含めたブリッジング業務も対応しています。
+              <strong>【日本語】</strong><br>
+              <strong>スタートアップから中堅企業まで</strong>が主な対象です。<br><br>
+              海外スタートアップの場合、初期段階（シードラウンド）からのご相談も歓迎です。日本企業の場合、月額顧問契約での継続的なサポートを推奨しています。<br><br>
+              <strong>大企業や特殊な業界</strong>の場合は、提携先の紹介等により対応させていただく場合もあります。規模に不安がある場合は、まずはお気軽にご相談ください。<br><br>
+              <strong>【English】</strong><br>
+              Our primary focus is <strong>startups to mid-market companies</strong>.<br><br>
+              For overseas startups, we welcome inquiries even at early stages (seed round). For Japanese companies, we recommend ongoing support through monthly advisory contracts. For large enterprises or specialized sectors, we may refer you to suitable partners. Please reach out if you have concerns about company size — we're happy to discuss.
             </div>
           </div>
 
-          <!-- Q6 -->
+          <!-- Q6: 対応形態 -->
           <div class="faq-item">
             <div class="faq-question">
-              <span class="q-icon">Q</span>
-              <span class="q-text">
-                Is AI Consulting available for overseas companies? / AIコンサルは海外企業でも利用できますか？
-              </span>
+              <span class="q-icon">Q6</span>
+              <span class="q-text">リモート対応、海外出張、地域制限はありますか？/ Do you support remote meetings, overseas travel, and are there regional restrictions?</span>
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <strong>EN:</strong> AI Consulting is exclusively for Japanese SMEs. For overseas companies, please inquire about our Japan Market Entry service.<br><br>
-              <strong>JP:</strong> AIコンサルティングは日本の中小企業向け限定のサービスです。海外企業のお客様には、日本市場参入支援サービスをご案内しております。まずはお気軽にご相談ください。
+              <strong>【日本語】</strong><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li><strong>対応スタイル</strong>：通常はリモート（Zoom / Teams）中心です。重要な局面・キックオフ、契約前のミーティング等で必要に応じて対面ミーティングを実施します</li>
+                <li><strong>海外出張</strong>：対応可能です。海外出張が必要な場合、旅費はお客様側で実費負担いただきます</li>
+                <li><strong>地域制限</strong>：ございません。国内・海外を問わず、どの地域のお客様でもご相談いただけます</li>
+              </ul>
+              <strong>【English】</strong><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li><strong>Engagement Model</strong>: We operate primarily remote (Zoom/Teams) with on-site meetings arranged for key milestones, kickoffs, and pre-contract discussions as needed</li>
+                <li><strong>Overseas Travel</strong>: We support overseas engagement. Travel expenses are covered by the client</li>
+                <li><strong>Regional Restrictions</strong>: None. We serve clients across Japan and internationally</li>
+              </ul>
             </div>
           </div>
 
         </div>
+
+        <!-- ============================================
+             セクション1：海外企業向け（Japan Market Entry）
+        ============================================ -->
+        <div class="faq-section-header ocean">
+          For Overseas Companies — Japan Market Entry Support
+        </div>
+
+        <div class="faq-list">
+
+          <!-- Q7: Local Setup Support -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q7</span>
+              <span class="q-text">Do you support full local setup in Japan?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              We provide full support through the <strong>planning and strategy phase</strong>. For execution (legal entity setup, office establishment, hiring, etc.), we leverage our <strong>trusted partner network</strong> to connect you with the right specialists.<br><br>
+              We support:
+              <ul style="margin: 12px 0 12px 24px;">
+                <li>Market analysis & entry strategy</li>
+                <li>Regulatory & compliance review</li>
+                <li>Local partner & manufacturing partner selection</li>
+                <li>Sales channel strategy</li>
+                <li>PR & launch communications</li>
+              </ul>
+              For specialized areas (legal, tax, accounting), we provide introductions to trusted advisors.
+            </div>
+          </div>
+
+          <!-- Q8: Country Coverage -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q8</span>
+              <span class="q-text">Do you work with companies from any country?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes, we work with companies <strong>from any country</strong>. Our track record includes support for companies from Finland, India, China, Malaysia, and other regions across Asia and Europe.<br><br>
+              Our core expertise is in <strong>semiconductors, electronics, tech, and IoT</strong>. For industries significantly outside this scope (beauty, entertainment, etc.), we may find it challenging to provide the depth needed — please consult with us first.
+            </div>
+          </div>
+
+          <!-- Q9: Language Support -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q9</span>
+              <span class="q-text">Do I need to speak Japanese?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <strong>No problem at all. We support both Japanese and English.</strong> You can conduct all discussions, contracts, and project work entirely in English. We also provide <strong>interpretation and translation support between Japanese and overseas companies</strong> for negotiations and partnership agreements.
+            </div>
+          </div>
+
+          <!-- Q10: Partner Selection -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q10</span>
+              <span class="q-text">Can you help with selecting Japanese partners or manufacturing partners?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes, <strong>partner selection is one of our core services</strong>.<br><br>
+              We support:
+              <ul style="margin: 12px 0 12px 24px;">
+                <li><strong>Supply Chain Development</strong>: sourcing & negotiating manufacturing partners</li>
+                <li><strong>Distribution & Sales Partnership</strong>: identifying resellers & distributors</li>
+                <li><strong>Local Partner Selection</strong>: function-specific partners (sales, marketing, HR, etc.)</li>
+                <li><strong>M&A & Alliances</strong>: identifying equity partnerships & strategic alliances</li>
+              </ul>
+              Leveraging our industry network and market expertise, we <strong>identify and facilitate negotiations with optimal partners</strong> for your needs.
+            </div>
+          </div>
+
+          <!-- Q11: Success Factors -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q11</span>
+              <span class="q-text">What are the key success factors for market entry?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Key success factors we emphasize (learned from many case studies):<br><br>
+              <ol style="margin: 12px 0 12px 24px;">
+                <li><strong>Thorough Market Research</strong>: understand competitive landscape, regulations, and consumer needs</li>
+                <li><strong>Careful Partner Selection</strong>: trustworthy local partnerships are critical</li>
+                <li><strong>Long-term Perspective</strong>: expect 2+ years before profitability in Japan; avoid short-term profit expectations</li>
+                <li><strong>Human Capital</strong>: invest in local team hiring & development</li>
+                <li><strong>Compliance & Regulations</strong>: strictly adhere to Japanese laws and business practices</li>
+                <li><strong>Strategic Flexibility</strong>: be prepared to adapt when market realities diverge from initial plans</li>
+              </ol>
+              We help you <strong>anticipate pitfalls early</strong> and develop <strong>high-probability strategies</strong>.
+            </div>
+          </div>
+
+          <!-- Q12: Case Studies & Track Record -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q12</span>
+              <span class="q-text">Can you share past projects or case studies?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              We <strong>prioritize client confidentiality</strong>, so detailed case studies cannot be shared publicly. However, we can share:<br><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li><strong>Clients Served</strong>: 5+ companies</li>
+                <li><strong>Countries Served</strong>: 4 countries (Finland, India, China, Malaysia, others)</li>
+                <li><strong>Core Industries</strong>: semiconductors, electronics, tech, IoT</li>
+              </ul>
+              Detailed examples can be discussed <strong>after NDA signing</strong>. Please feel free to inquire.
+            </div>
+          </div>
+
+          <!-- Q13: Other Questions -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q13</span>
+              <span class="q-text">I have other questions not listed here. What should I do?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              We'd love to hear from you. Contact us via:<br><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li>📧 <strong>Contact Form</strong> — <a href="contact.html">here</a></li>
+                <li>💬 <strong>Chatbot</strong> — "💬" icon in the bottom right</li>
+                <li>📞 <strong>Phone</strong> — +81-80-5955-0591 (9:00-18:00 JST)</li>
+              </ul>
+              Initial consultations are free. Please feel free to share any concerns or specific needs.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ============================================
+             セクション2：日本企業向け（海外企業対応・AIコンサル）
+        ============================================ -->
+        <div class="faq-section-header japan">
+          日本企業向け　海外企業対応・AIコンサル
+        </div>
+
+        <div class="faq-list">
+
+          <!-- Q13: AI対応範囲 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q13</span>
+              <span class="q-text">AIコンサルではどこまで対応していますか？</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <strong>対応可能な領域：</strong><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li>✅ ChatGPT / Claude 等の生成AI活用（業務効率化、プロンプト設計）</li>
+                <li>✅ 業務自動化（RPA、ワークフロー自動化）</li>
+                <li>✅ AIチャットボット導入支援</li>
+                <li>✅ AI戦略立案（経営層向けAIロードマップ策定）</li>
+                <li>✅ 生成AI研修（社員向けトレーニング・ワークショップ）</li>
+                <li>✅ AIツール選定・導入支援（既存SaaS型AIツール）</li>
+                <li>✅ AIガバナンス・コンプライアンス（社内ガイドライン策定）</li>
+              </ul>
+              <strong>対応外の領域：</strong><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li>❌ 社内データのRAG構築（専門開発が必要なため、提携先をご紹介）</li>
+                <li>❌ 機械学習モデル開発（データサイエンス・AIエンジニアリング）</li>
+                <li>❌ 音声・画像認識システム導入</li>
+              </ul>
+              当社の強みは、<strong>経営視点でのAI導入戦略設計と実用的な活用支援</strong>です。技術的な実装が必要な場合は、提携先のデータサイエンス企業をご紹介いたします。
+            </div>
+          </div>
+
+          <!-- Q14: 実装支援 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q14</span>
+              <span class="q-text">実装・構築も支援していただけますか？</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <strong>戦略・計画段階は当社で実施</strong>します。その後の実装について：<br><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li><strong>既存SaaS型ツール導入</strong>（ChatGPT、Copilot、その他AI SaaS）→ 当社が導入支援</li>
+                <li><strong>カスタム開発が必要な案件</strong>→ 提携先の開発企業をご紹介・プロジェクト管理をサポート</li>
+              </ul>
+              PoC（概念実証）段階から本格導入まで、<strong>全段階で伴走し、成功を確度高くサポート</strong>いたします。
+            </div>
+          </div>
+
+          <!-- Q15: 業種対応 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q15</span>
+              <span class="q-text">うちの業種でも対応していただけますか？</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <strong>得意業界：</strong><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li>✅ 半導体・電子部品</li>
+                <li>✅ テック系（ソフトウェア、IoT、通信、AI関連）</li>
+                <li>✅ 製造業（特に部品・材料メーカー）</li>
+                <li>✅ エンジニアリング・コンサル系</li>
+              </ul>
+              <strong>対応が難しい業界：</strong><br>
+              当社の専門領域（半導体・テック・IoT等）と<strong>大きく異なる業種</strong>（美容、エンタメ等）については、業界特有の知識が必要なため対応が難しい場合があります。<br><br>
+              ご不安な場合は、<strong>まずはお気軽にご相談ください。業界特性を確認した上で、対応の可否をお返事いたします。</strong>
+            </div>
+          </div>
+
+          <!-- Q16: AI導入の期間と成果 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q16</span>
+              <span class="q-text">AI導入には、どのくらいの期間がかかりますか？成果はいつ出ますか？</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <strong>AI導入：</strong><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li><strong>小規模（部門単位の生成AI導入）</strong>：1〜3ヶ月で効果実感</li>
+                <li><strong>大規模（全社的な業務自動化）</strong>：6ヶ月〜1年で本格効果</li>
+              </ul>
+              <strong>成功のポイント：</strong><br>
+              短期的な数字よりも「プロセスの改善」「組織のAI理解度向上」といった<strong>定性的な成果を重視</strong>することが、長期的な成功につながります。
+            </div>
+          </div>
+
+          <!-- Q17: その他の質問 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="q-icon">Q17</span>
+              <span class="q-text">ここに掲載されていない質問があります。どうしたらいいですか？</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              ぜひお気軽にお問い合わせください。以下の方法でご連絡いただけます：<br><br>
+              <ul style="margin: 12px 0 12px 24px;">
+                <li>📧 <strong>お問い合わせフォーム</strong> — <a href="contact.html">こちら</a></li>
+                <li>💬 <strong>チャットボット</strong> — 画面右下の「💬」アイコン</li>
+                <li>📞 <strong>電話</strong> — +81-80-5955-0591（営業時間 9:00-18:00）</li>
+              </ul>
+              初回相談は無料です。ご不安な点、具体的なご要望がありましたら、まずはお気軽にお話しください。
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
