@@ -280,49 +280,142 @@ ul {
 }
 
 /* ========================================
-   ヒーローセクション
+   ヒーローセクション（Pattern B: Deep Ocean）
+   実写スカイライン写真 + 寒色グラデーション + 35本の光柱
 ======================================== */
 .hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1e3a6e 100%);
+  background: var(--navy-dark);
   color: var(--white);
   padding: 120px 0 100px;
   position: relative;
   overflow: hidden;
+  min-height: 620px;
 }
 
-.hero::before {
-  content: '';
+/* 背景写真レイヤー */
+.hero .bg-photo {
   position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(200,24,30,0.12) 0%, transparent 70%);
+  inset: 0;
+  background-image: url('../assets/bg/city-skyline.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6) contrast(1.15) saturate(1.05) hue-rotate(-15deg);
+  z-index: 1;
+}
+
+/* ブルーアワーのカラーグレーディング */
+.hero .bg-grade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(180deg,
+      rgba(5,12,40,0.70) 0%,
+      rgba(10,25,65,0.55) 30%,
+      rgba(15,55,115,0.40) 55%,
+      rgba(25,85,150,0.40) 75%,
+      rgba(10,30,75,0.60) 100%);
+  mix-blend-mode: multiply;
   pointer-events: none;
 }
 
-.hero::after {
+/* 中央下と上部の青の発光 */
+.hero .bg-tint {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background:
+    radial-gradient(ellipse 85% 45% at 50% 105%, rgba(0,160,240,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 25% 5%, rgba(15,35,110,0.55) 0%, transparent 75%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* 水平データストリーム（建物の足元を流れる光） */
+.hero .data-streams {
+  position: absolute;
+  bottom: 6%;
+  left: 0; right: 0;
+  height: 32%;
+  z-index: 5;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background:
+    linear-gradient(95deg, transparent 5%, rgba(0,200,255,0.55) 25%, rgba(200,240,255,0.7) 32%, transparent 50%, transparent 60%, rgba(60,140,255,0.5) 78%, rgba(180,220,255,0.6) 84%, transparent 96%) 0 28% / 100% 2px no-repeat,
+    linear-gradient(85deg, transparent 8%, rgba(100,180,255,0.45) 28%, transparent 50%, transparent 65%, rgba(0,200,255,0.45) 80%, transparent 94%) 0 50% / 100% 1.5px no-repeat,
+    linear-gradient(105deg, transparent 12%, rgba(0,200,255,0.45) 32%, rgba(180,240,255,0.6) 40%, transparent 55%, transparent 70%, rgba(120,180,255,0.45) 85%, transparent 96%) 0 72% / 100% 1.5px no-repeat,
+    linear-gradient(95deg, transparent 5%, rgba(180,230,255,0.3) 25%, transparent 48%, transparent 60%, rgba(150,220,255,0.35) 80%, transparent 94%) 0 88% / 100% 1px no-repeat;
+  animation: stream-flow 8s ease-in-out infinite;
+}
+@keyframes stream-flow {
+  0%, 100% { transform: translateX(0); opacity: 0.9; }
+  50%     { transform: translateX(-15px); opacity: 1; }
+}
+
+/* 縦の光柱コンテナ */
+.hero .beams {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* 光柱（個別）共通スタイル */
+.hero .beam {
+  position: absolute;
+  bottom: 0;
+  width: 2px;
+  transform-origin: bottom;
+  filter: blur(0.5px);
+  animation: beam-flicker 4s ease-in-out infinite;
+}
+.hero .beam::after {
   content: '';
   position: absolute;
-  bottom: -20%;
-  left: -5%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
-  pointer-events: none;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: inherit;
+  filter: blur(10px);
+  opacity: 1;
+}
+@keyframes beam-flicker {
+  0%, 100% { opacity: 0.85; }
+  40%     { opacity: 1;    }
+  70%     { opacity: 0.7;  }
+}
+
+/* 光柱の色バリエーション（寒色中心） */
+.hero .beam.cyan   { background: linear-gradient(to top, rgba(0,229,255,1) 0%, rgba(0,229,255,0.75) 30%, transparent 92%);  box-shadow: 0 0 14px rgba(0,229,255,0.95); }
+.hero .beam.lcyan  { background: linear-gradient(to top, rgba(140,240,255,1) 0%, rgba(140,240,255,0.7) 30%, transparent 92%); box-shadow: 0 0 14px rgba(140,240,255,0.85); }
+.hero .beam.white  { background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(220,240,255,0.75) 30%, transparent 92%); box-shadow: 0 0 16px rgba(255,255,255,0.8); }
+.hero .beam.ice    { background: linear-gradient(to top, rgba(180,230,255,1) 0%, rgba(180,230,255,0.7) 30%, transparent 92%); box-shadow: 0 0 14px rgba(180,230,255,0.85); }
+.hero .beam.blue   { background: linear-gradient(to top, rgba(60,140,255,1) 0%, rgba(60,140,255,0.7) 30%, transparent 92%);   box-shadow: 0 0 14px rgba(60,140,255,0.95); }
+.hero .beam.dblue  { background: linear-gradient(to top, rgba(40,100,220,1) 0%, rgba(40,100,220,0.65) 30%, transparent 92%);  box-shadow: 0 0 14px rgba(40,100,220,0.9); }
+.hero .beam.violet { background: linear-gradient(to top, rgba(140,120,255,1) 0%, rgba(140,120,255,0.7) 30%, transparent 92%); box-shadow: 0 0 14px rgba(140,120,255,0.85); }
+.hero .beam.pink   { background: linear-gradient(to top, rgba(255,140,200,0.85) 0%, rgba(255,140,200,0.55) 30%, transparent 92%); box-shadow: 0 0 12px rgba(255,140,200,0.7); }
+
+/* コンテナとコンテンツを最前面に */
+.hero > .container {
+  position: relative;
+  z-index: 10;
 }
 
 .hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   max-width: 760px;
 }
 
 .hero-tag {
   display: inline-block;
-  background: rgba(200,24,30,0.2);
-  color: #ff6b6e;
-  border: 1px solid rgba(200,24,30,0.4);
+  background: rgba(0,150,220,0.20);
+  color: #80e0ff;
+  border: 1px solid rgba(0,180,255,0.45);
   padding: 6px 16px;
   border-radius: 100px;
   font-size: 0.82rem;
@@ -338,6 +431,7 @@ ul {
   line-height: 1.2;
   margin-bottom: 24px;
   letter-spacing: -0.03em;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.7);
 }
 
 .hero-title span {
@@ -346,10 +440,11 @@ ul {
 
 .hero-desc {
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.80);
+  color: rgba(255,255,255,0.85);
   margin-bottom: 40px;
   max-width: 580px;
   line-height: 1.8;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
 }
 
 .hero-btns {
