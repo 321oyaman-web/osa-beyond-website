@@ -585,8 +585,6 @@ ul {
 .footer-brand .logo {
   height: 32px;
   margin-bottom: 16px;
-  /* ロゴを白背景に馴染ませる */
-  filter: brightness(0) invert(1);
 }
 
 .footer-brand p {
